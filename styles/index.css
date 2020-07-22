@@ -6,7 +6,7 @@ body {
 
 div#content {
     position: relative;
-    margin: 100px 0;
+    margin: 100px auto;
     height: 100%;
 
     display: flex;
@@ -48,4 +48,34 @@ button.button:hover {
     background-color: #c0c0c0;
 
     transition: 0.3s ease-in-out;
+}
+
+/* Desktop Screens */
+@media screen and (max-width: 1920px) and (min-width: 1021px) {
+
+}
+/* Tablets */
+@media screen and (max-width: 1020px) and (min-width: 801px) {
+    h1#company-name {
+        font-size: 5rem;
+    }
+    p#subtitle {
+        font-size: 2rem;
+    }
+    button.button {
+        font-size: 1.3rem;
+    }
+}
+
+/* Phones */
+@media screen and (max-width: 800px) {
+    h1#company-name {
+        font-size: 4rem;
+    }
+    p#subtitle {
+        font-size: 1.5rem;
+    }
+    button.button {
+        font-size: 1rem;
+    }
 }
