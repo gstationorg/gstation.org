@@ -2,14 +2,15 @@ const path = require("path")
 const common = require("./webpack.common")
 const {merge} = require("webpack-merge")
 
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = merge(common, {
     mode: "development",
     output: {
         filename: '[name]-bundle.js',
-        path: path.resolve(__dirname, "dist"),
-        publicPath: "/dist/"        
+        path: path.resolve(__dirname, "server"),
+        publicPath: "/server/"        
     },
     devServer: {
         contentBase: path.resolve(__dirname, "./src/"),
@@ -21,7 +22,7 @@ module.exports = merge(common, {
                 test: /\.css$/i,
                 use: [
                     {
-                        loader: "style-loader", // Puts JS styles to DOM
+                        loader: MiniCssExtractPlugin.loader, // Puts JS styles to DOM
                     },
                     {
                         loader: "css-loader",
@@ -34,7 +35,7 @@ module.exports = merge(common, {
             {
                 test: /\.scss$/i,
                 use: [ {
-                        loader: "style-loader",
+                        loader: MiniCssExtractPlugin.loader,
                     }, {
                         loader: "css-loader",
                     }, {
@@ -54,4 +55,7 @@ module.exports = merge(common, {
             },
         ],
     },
+    plugins: [
+        new MiniCssExtractPlugin(),
+    ],
 })
