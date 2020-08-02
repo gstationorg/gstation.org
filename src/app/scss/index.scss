@@ -56,32 +56,16 @@ button.button:hover {
     transition: 0.3s ease-in-out;
 }
 
-/* Desktop Screens */
-@media screen and (max-width: 1920px) and (min-width: 1021px) {
-
-}
-/* Tablets */
-@media screen and (max-width: 1020px) and (min-width: 801px) {
-    // h1#company-name {
-    //     font-size: 5rem;
-    // }
-    // p#subtitle {
-    //     font-size: 2rem;
-    // }
-    // button.button {
-    //     font-size: 1.3rem;
-    // }
-}
-
 /* Phones */
 @media screen and (max-width: 800px) {
-    // h1#company-name {
-    //     font-size: 4rem;
-    // }
-    // p#subtitle {
-    //     font-size: 1.5rem;
-    // }
-    // button.button {
-    //     font-size: 1rem;
-    // }
+    div#content {
+        margin-top: -75px;
+    }
+    p#subtitle {
+        margin-top: 128px;
+    }
+    
+    .site-main__section--cta {
+        margin-top: 128px;
+    }
 }
