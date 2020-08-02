@@ -14,15 +14,14 @@ div#content {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
 }
 
 h1#company-name {
     margin: 0;
-    font-size: calc(48px + 3vw);
+    font-size: calc(36px + 3.2vw);
     font-weight: 700;
-    text-align: center;
 }
 
 main.site-main {
@@ -31,7 +30,7 @@ main.site-main {
 
 p#subtitle {
     margin-top: calc(128px + 5vh);
-    font-size: calc(12px + 1.2vw);
+    font-size: calc(10px + 1.1vw);
     font-weight: 300;
 }
 
